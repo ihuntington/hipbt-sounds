@@ -1,0 +1,918 @@
+[
+    {
+        "id": "p095m7rj",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Haggis Horns",
+            "secondary": "Love Gets You High",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 330,
+            "end": 333,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/6s9apBm4YyRUO4Li87hRbR"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/love-gets-you-high/375754407?i=375754490"
+            }
+        ]
+    },
+    {
+        "id": "p095m7s1",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Aaron Frazer",
+            "secondary": "Girl On The Phone",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 341,
+            "end": 347,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095m87y",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Maceo Parker",
+            "secondary": "Homeboy",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 512,
+            "end": 516,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/3gCiJLZj4PJfhWXzwnV7FR"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/homeboy/1347854494?i=1347854740"
+            }
+        ]
+    },
+    {
+        "id": "p095m8q2",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Cha Wa",
+            "secondary": "My People",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 721,
+            "end": 727,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/4GnYJTGoutZsKqdqPod48s"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/my-people/1547894757?i=1547894758"
+            }
+        ]
+    },
+    {
+        "id": "p095m95f",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Jason Joshua & The Beholders",
+            "secondary": "Poor Boy",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 948,
+            "end": 954,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095m9t5",
+        "type": "segment_item",
+        "titles": {
+            "primary": "The James Taylor Quartet",
+            "secondary": "The Frug",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 1276,
+            "end": 1282,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/421hb1xFRtJqpL2uCsUtzm"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/the-frug/1442216231?i=1442216241"
+            }
+        ]
+    },
+    {
+        "id": "p095m9x5",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Willie Hutch",
+            "secondary": "Everybody Needs Money (Sir Dancealot Mix)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 1431,
+            "end": 1437,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mb7x",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Nina Simone",
+            "secondary": "Gimme Some",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 1971,
+            "end": 1977,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mbk3",
+        "type": "segment_item",
+        "titles": {
+            "primary": "The Bandulus",
+            "secondary": "Dear Lord",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 2223,
+            "end": 2229,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mbw8",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Boule Noire",
+            "secondary": "Constance (mikeandtess edit 4 friends)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 2562,
+            "end": 2568,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mc0l",
+        "type": "segment_item",
+        "titles": {
+            "primary": "First Choice",
+            "secondary": "Double Cross",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 2884,
+            "end": 2890,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/18g9SakDKOlR3Noxw66DDa"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/double-cross/1207373973?i=1207374277"
+            }
+        ]
+    },
+    {
+        "id": "p095mcwl",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Otis Redding",
+            "secondary": "Love Man",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": null,
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/16dz1n3ctolQbuZPtvHVqH"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/love-man/997601248?i=997601618"
+            }
+        ]
+    },
+    {
+        "id": "p095mcwp",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Stevie Wonder",
+            "secondary": "Sir Duke",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": null,
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/sir-duke/1471563127?i=1471566960"
+            }
+        ]
+    },
+    {
+        "id": "p095mcws",
+        "type": "segment_item",
+        "titles": {
+            "primary": "The Quantic Orchestra",
+            "secondary": "Hold It Down feat Alice Russell",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": null,
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095md80",
+        "type": "segment_item",
+        "titles": {
+            "primary": "T‐Connection",
+            "secondary": "Do What You Wanna Do",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": null,
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/4ADW3HBraqvlFcxRlcRyoK"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/do-what-you-wanna-do-moplen-extended-remix/1482115064?i=1482115066"
+            }
+        ]
+    },
+    {
+        "id": "p095md82",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Gramophone Soul",
+            "secondary": "Wings",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": null,
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095md7h",
+        "type": "segment_item",
+        "titles": {
+            "primary": "The Rance Allen Group",
+            "secondary": "Up Above My Head",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 4393,
+            "end": 4399,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mdcb",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Kindly Shepherds",
+            "secondary": "Lend Me Your Hand",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 4757,
+            "end": 4763,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mdcl",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Reverend W. Bernard Avant Jr. & the St. James Gospel Choir)",
+            "secondary": "Don't Let The Green Grass Fool You (Don't Let The Devil Fool You)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 4768,
+            "end": 4774,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mddq",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Parliament",
+            "secondary": "P-Funk (Wants To Get Funked Up)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 4979,
+            "end": 5436,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/0GIfaHgivfBCV67eYF996A"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/p-funk-wants-to-get-funked-up/1440837684?i=1440837687"
+            }
+        ]
+    },
+    {
+        "id": "p095mdm7",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Marvin Gaye & Tammi Terrell",
+            "secondary": "California Soul",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 5607,
+            "end": 5612,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/4TrJgznJbv01CJWl2JDt0n"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/california-soul-feat-tammi-terrell/1434919772?i=1434920251"
+            }
+        ]
+    },
+    {
+        "id": "p095mdpp",
+        "type": "segment_item",
+        "titles": {
+            "primary": "DJ Vadim, Sabira Jade & Kwasi Asante",
+            "secondary": "Hidden Treasure",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 5793,
+            "end": 5799,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/0fnAx6fEUK0yYehSWprHXs"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/hidden-treasure-feat-sabira-jade-kwasi-asante-acappella/1444672345?i=1444672512"
+            }
+        ]
+    },
+    {
+        "id": "p095mdtg",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Polyrhythmics",
+            "secondary": "I Believe In Love (feat. Lucky Brown)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 6148,
+            "end": 6154,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mdvr",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Acantha Lang",
+            "secondary": "He Said/She Said",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 6398,
+            "end": 6404,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mdz7",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Millie Jackson",
+            "secondary": "All I Want Is A Fighting Chance",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 6656,
+            "end": 6662,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mf2h",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Adryon De Leon",
+            "secondary": "Ally",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 6921,
+            "end": 6927,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mf4h",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Jackie Wilson",
+            "secondary": "(Why Don't You) Do Your Thing",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 7058,
+            "end": 7064,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/2N9IGRhZsTv6it7PgJSt2e"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/why-dont-you-do-your-thing/967305949?i=967308188"
+            }
+        ]
+    },
+    {
+        "id": "p095mf5l",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Quincy Jones",
+            "secondary": "Call Me Mister Tibbs (Main Title)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 7197,
+            "end": 7203,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mf9k",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Rick James",
+            "secondary": "Give It To Me Baby",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 7421,
+            "end": 7427,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/1VhprsYtboBXIF8jd02F6A"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/give-it-to-me-baby-single-version/1442939650?i=1442943247"
+            }
+        ]
+    },
+    {
+        "id": "p095mfj2",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Max Sedgley",
+            "secondary": "Funk Drops With Drums Vol.2",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 7654,
+            "end": 7660,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mg4w",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Kool & The Gang",
+            "secondary": "Jungle Boogie",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 7966,
+            "end": 8150,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/3K0SJUQNbOkUprTFcwwAKN"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/jungle-boogie/1461423923?i=1461424409"
+            }
+        ]
+    },
+    {
+        "id": "p095mgb1",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Daytoner",
+            "secondary": "I Get By",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 8120,
+            "end": 8126,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mgjg",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Fred Ramirez",
+            "secondary": "Comin' Home Baby",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 8302,
+            "end": 8308,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mgqg",
+        "type": "segment_item",
+        "titles": {
+            "primary": "The O’Jays",
+            "secondary": "I Love Music (Tom Moulton Mix)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 8476,
+            "end": 8482,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/0ji4gxiUM7YAWBmyekSE5t"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/i-love-music-tom-moulton-mix/1017974636?i=1017978006"
+            }
+        ]
+    },
+    {
+        "id": "p095mh3b",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Gil Scott‐Heron",
+            "secondary": "Lady Day And John Coltrane",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 9202,
+            "end": 9208,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/6yz7M1DItRFo8ATGeLoM9y"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/lady-day-and-john-coltrane/826571844?i=826574987"
+            }
+        ]
+    },
+    {
+        "id": "p095mh7j",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Gentleman’s Dub Club",
+            "secondary": "Honey (feat. Hollie Cook)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 9471,
+            "end": 9477,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": [
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-spotify",
+                "label": "Spotify",
+                "uri": "https://open.spotify.com/track/5CmWJMAGTOE16PKvxzYmLi"
+            },
+            {
+                "type": "commercial-music-service",
+                "id": "commercial-music-service-apple",
+                "label": "Apple Music",
+                "uri": "https://music.apple.com/gb/album/honey-feat-hollie-cook/1544840714?i=1544840721"
+            }
+        ]
+    },
+    {
+        "id": "p095mhcj",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Hot 8 Brass Band",
+            "secondary": "Papa Was A Rolling Stone",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 9897,
+            "end": 9903,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mhl0",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Candi Staton",
+            "secondary": "Six Nights And A Day",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 10433,
+            "end": 10439,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mhl6",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Pablo Beltrán Ruiz",
+            "secondary": "Que Se Sepa (Lego Edit)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 10444,
+            "end": 10450,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    },
+    {
+        "id": "p095mhpz",
+        "type": "segment_item",
+        "titles": {
+            "primary": "Sam & Dave",
+            "secondary": "Wrap It Up (Pecoe Edit)",
+            "tertiary": null
+        },
+        "image_url": null,
+        "offset": {
+            "start": 10667,
+            "end": 10673,
+            "label": null,
+            "now_playing": false
+        },
+        "synopses": null,
+        "uris": []
+    }
+]
