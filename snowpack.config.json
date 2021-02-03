@@ -13,6 +13,7 @@
         "mocks/*",
         ".editorconfig",
         ".gitignore",
-        "package*.json"
+        "package*.json",
+        "README.md"
     ]
 }
