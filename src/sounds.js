@@ -13,6 +13,8 @@ export class Sounds {
         this.currentTrack = null;
         this.seeking = false;
 
+        this.tracklist = new Map();
+
         // Thinking: perhaps could check to see if the page has a player
         // and then find out the programme and look that up. Also check for
         // preloaded state too.
@@ -34,7 +36,8 @@ export class Sounds {
             return this;
         }
 
-        this.setup();
+        // TODO: commented out during testing temporarily
+        // this.setup();
 
         // TODO - this makes no sense, if it's live then there is a station
         // / if there is player then it is a station - stoopid
@@ -63,7 +66,7 @@ export class Sounds {
     }
 
     // Rename this
-    get tracklist() {
+    get preloadedTracklist() {
         const state = this.getPreloadedState();
         // TODO: Live and on demand may have different locations for tracks
         const tracks = state && state.tracks && state.tracks.data || [];
@@ -103,11 +106,11 @@ export class Sounds {
 
             this.startTimer();
 
-            this.tracklist.forEach((track) => {
+            this.preloadedTracklist.forEach((track) => {
                 this.addTrack(track);
             });
 
-            const nowPlayingTrack = this.tracklist.find((track) => track.offset.now_playing);
+            const nowPlayingTrack = this.preloadedTracklist.find((track) => track.offset.now_playing);
 
             if (nowPlayingTrack) {
                 this.currentLiveTrack = this.parseTrack(nowPlayingTrack);
@@ -143,7 +146,7 @@ export class Sounds {
             case 'timeupdate': {
                 const { currentTime } = event;
 
-                const playingTrack = this.tracklist.filter((track) => {
+                const playingTrack = this.preloadedTracklist.filter((track) => {
                     return currentTime >= track.offset.start && currentTime <= track.offset.end;
                 });
 
@@ -233,7 +236,7 @@ export class Sounds {
         const currentTime = event.currentTime * 1000;
         console.log('handleSignificantTimeUpdate', event);
 
-        const playingTrack = Array.from(window.hipbt.tracklist.values()).filter((track) => {
+        const playingTrack = Array.from(this.tracklist.values()).filter((track) => {
             const start = containerStartTime + (track.start * 1000);
             const end = containerStartTime + (track.end * 1000);
             console.log('start', start, 'end', end, 'current', currentTime);
@@ -286,10 +289,8 @@ export class Sounds {
     }
 
     addTrack(track) {
-        const tracklist = window.hipbt.tracklist;
-
-        if (track.segment_type === "music" && !tracklist.has(track.id)) {
-            tracklist.set(track.id, this.parseTrack(track));
+        if (track.segment_type === "music" && !this.tracklist.has(track.id)) {
+            this.tracklist.set(track.id, this.parseTrack(track));
         }
     }
 
@@ -331,24 +332,24 @@ export class Sounds {
     sendSegment(segment) {
         console.log('> hipbt > sendSegment', segment);
 
-        const frame = document.createElement('iframe')
-        frame.id = 'hipbt-save'
-        frame.name = 'hipbt-save-frame'
-        frame.width = 1
-        frame.height = 1
-        frame.referrerPolicy = 'strict-origin-when-cross-origin'
-        frame.onload = (event) => {
-            console.log('Success load iframe page', event)
-            document.removeChild(frame)
-        }
-        frame.onerror = (event) => {
-            console.log('Error loading iframe', event)
-            document.removeChild(frame)
-        }
+        // const frame = document.createElement('iframe')
+        // frame.id = 'hipbt-save'
+        // frame.name = 'hipbt-save-frame'
+        // frame.width = 1
+        // frame.height = 1
+        // frame.referrerPolicy = 'strict-origin-when-cross-origin'
+        // frame.onload = (event) => {
+        //     console.log('Success load iframe page', event)
+        //     document.removeChild(frame)
+        // }
+        // frame.onerror = (event) => {
+        //     console.log('Error loading iframe', event)
+        //     document.removeChild(frame)
+        // }
 
-        iframe.src = `http://localhost:8080/bookmarklet/save?${qs.stringify(segment)}`
+        // frame.src = `https://267989d93534.eu.ngrok.io/save?${qs.stringify(segment)}`
 
-        document.body.appendChild(iframe);
+        // document.body.appendChild(frame);
     }
 
     startTimer() {
@@ -369,4 +370,16 @@ export class Sounds {
 
         return this;
     };
+
+    async fetch(segment) {
+        try {
+            const response = await fetch(`https://bowie.test/save?${qs.stringify(segment)}`, {
+                credentials: 'include',
+            });
+            const data = await response.json();
+            console.log('>>> data', data);
+        } catch (err) {
+            console.log('There was an error fetching')
+        }
+    }
 }
