@@ -278,7 +278,7 @@
                 document.removeChild(frame);
             };
 
-            frame.src = `https://www.bowie.test/iframe`;
+            frame.src = `https://www.bowie.test/bookmarklet`;
             frame.style.width = "100%";
             frame.style.display = "block";
             frame.style.position = "sticky";
