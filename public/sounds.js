@@ -6,7 +6,7 @@
  * - Use a worker for staying synced when tab sleeps
  */
 (function hipbt_bbc_sounds () {
-    const { NODE_ENV, SNOWPACK_PUBLIC_BOWIE_URL } = import.meta.env;
+    const { NODE_ENV, SNOWPACK_PUBLIC_BOWIE_URL, SNOWPACK_PUBLIC_BBC_URL } = import.meta.env;
     const URLS = {
         SEGMENTS: 'https://rms.api.bbc.co.uk/v2/services/bbc_6music/segments/latest',
     };
@@ -338,6 +338,11 @@
     }
 
     window.__BOWIE__ = window.__BOWIE__ || {};
+
+    if (NODE_ENV === "production" && window.location.origin !== SNOWPACK_PUBLIC_BBC_URL) {
+        console.log("Cannot start HIPBT x BBC Sounds as the origin is not %s", SNOWPACK_PUBLIC_BBC_URL);
+        return;
+    }
 
     if (!window.__BOWIE__.sounds) {
         window.__BOWIE__.sounds = new Sounds();
