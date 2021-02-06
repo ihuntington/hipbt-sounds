@@ -305,7 +305,8 @@
                 document.removeChild(frame);
             };
 
-            frame.src = `${SNOWPACK_PUBLIC_BOWIE_URL}/bookmarklet`;
+            // NOTE: use trailing slash to be able to use relative paths in HTML
+            frame.src = `${SNOWPACK_PUBLIC_BOWIE_URL}/bookmarklet/`;
             frame.style.width = "100%";
             frame.style.display = "block";
             frame.style.position = "sticky";
