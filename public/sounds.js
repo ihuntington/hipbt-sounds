@@ -3,18 +3,20 @@
  *
  * - When pause continue to request latest segments every minute
  * - Store tracks from segments in session storage
+ * - Use a worker for staying synced when tab sleeps
  */
 (function hipbt_bbc_sounds () {
-    const { SNOWPACK_PUBLIC_BOWIE_URL } = import.meta.env;
+    const { NODE_ENV, SNOWPACK_PUBLIC_BOWIE_URL } = import.meta.env;
     const URLS = {
         SEGMENTS: 'https://rms.api.bbc.co.uk/v2/services/bbc_6music/segments/latest',
     };
 
     class Sounds {
         constructor() {
-            console.debug('HIPBT Start', new Date());
+            this._debug = NODE_ENV !== "production";
 
-            this.timer = null;
+            this.log("HIPBT x BBC Sounds start");
+
             this._player = this.getEmbeddedPlayers()['smp-wrapper'];
             this.currentTime = this._player.currentTime() * 1000;
             // TODO: if on demand the take first track from preloaded state
@@ -44,7 +46,7 @@
         }
 
         setup() {
-            console.debug('HIPBT Setup');
+            this.debug('HIPBT Setup');
 
             const sharedEvents = ['playing', 'pause', 'seeking', 'userPlay'];
             const liveEvents = ['significantTimeUpdate'];
@@ -62,6 +64,30 @@
                 this.addEvent(event);
             });
         };
+
+        log(message) {
+            if (!this._debug) {
+                return;
+            }
+
+            console.log({ date: Date.now(), message });
+        }
+
+        debug(message) {
+            if (!this._debug) {
+                return;
+            }
+
+            console.debug({ date: Date.now(), message });
+        }
+
+        error(message) {
+            if (!this._debug) {
+                return;
+            }
+
+            console.error({ date: Date.now(), message });
+        }
 
         addEvent(event) {
             if (event === "timeupdate") {
@@ -95,7 +121,7 @@
             // }
 
             if (playingTrack.length === 0 && this.seeking) {
-                console.log('> HIPBT End seeking and no current track');
+                this.log('> HIPBT End seeking and no current track');
                 this.currentTrack = null;
                 this.seeking = false;
                 this.sendNowPlaying(null);
@@ -105,8 +131,8 @@
 
             // TODO: improve the track selection as track times can overlap
             if (playingTrack.length > 0 && this.seeking) {
-                console.log('HIPBT End Seeking and current track(s)');
-                console.log(playingTrack);
+                this.log('HIPBT End Seeking and current track(s)');
+                this.log(playingTrack);
                 this.currentTrack = playingTrack.pop();
                 this.sendNowPlaying(this.currentTrack);
                 this.seeking = false;
@@ -118,7 +144,7 @@
 
             // No playing track and there is a current track then this is finished(?)
             if (playingTrack.length === 0 && this.currentTrack) {
-                console.log('HIPBT No playing track, send previous current track', this.currentTrack);
+                this.log('HIPBT No playing track, send previous current track', this.currentTrack);
                 this.sendSegment(this.currentTrack);
                 this.sendNowPlaying(null);
                 this.currentTrack = null;
@@ -127,7 +153,7 @@
 
             if (playingTrack.length > 0 && this.currentTrack) {
                 // cannot remember what currentTrack means
-                console.log("HIPBT Playing track(s) and has current track");
+                this.log("HIPBT Playing track(s) and has current track");
                 const newCurrentTrack = playingTrack.pop();
 
                 if (this.errors.length) {
@@ -150,7 +176,7 @@
             }
 
             if (playingTrack.length > 0) {
-                console.log("> is playing a track")
+                this.log("> is playing a track")
                 const newCurrentTrack = playingTrack.pop();
                 this.sendNowPlaying(newCurrentTrack);
                 this.currentTrack = newCurrentTrack;
@@ -172,7 +198,7 @@
                 }
 
                 case 'seeking': {
-                    console.log('> seeking', event);
+                    this.log('> seeking', event);
                     this.seeking = true;
                 }
             }
@@ -211,24 +237,24 @@
 
             if (eventCurrentTime - this.currentTime >= 60 * 1000) {
                 this.currentTime = eventCurrentTime;
-                console.log('> hipbt > change in minutes', new Date(this.currentTime));
+                this.log('> hipbt > change in minutes', new Date(this.currentTime));
                 this.getLatestSegments();
             }
         }
 
         getLatestSegments() {
-            console.log('> hipbt > getLatestSegments');
+            this.log('> hipbt > getLatestSegments');
             fetch(URLS.SEGMENTS)
                 .then((res) => res.json())
                 .then((res) => {
                     const tracks = res.data;
-                    console.log('> hipbt > getLatestSegments > segments');
-                    console.log(tracks);
+                    this.log('> hipbt > getLatestSegments > segments');
+                    this.log(tracks);
                 });
         };
 
         sendSegment(segment) {
-            console.log('HIPBT Send segment', segment);
+            this.log('HIPBT Send segment', segment);
             const message = {
                 segment,
                 // TODO: need to think more carefully about start and end times
@@ -243,7 +269,7 @@
         }
 
         sendNowPlaying(segment) {
-            console.log('HIPBT Send now playing', segment);
+            this.log('HIPBT Send now playing', segment);
 
             if (!segment) {
                 this.sendMessage({ type: 'NO_CURRENT_TRACK' });
@@ -259,7 +285,7 @@
         }
 
         createIframe() {
-            console.debug("HIPBT: create iframe");
+            this.debug("HIPBT: create iframe");
 
             if (this._iframe) {
                 return this._iframe;
@@ -275,7 +301,7 @@
 
             frame.onload = () => this.setup();
             frame.onerror = () => {
-                console.error("HIPBT Error loading iframe");
+                this.error("HIPBT Error loading iframe");
                 document.removeChild(frame);
             };
 
@@ -296,16 +322,16 @@
 
         sendMessage(message) {
             if (!this._iframe) {
-                console.error('You need to create an iframe before calling send message');
+                this.error('You need to create an iframe before calling send message');
                 return;
             }
 
-            console.log('HIPBT > Send Message', message)
+            this.log('HIPBT > Send Message', message)
 
             try {
                 this._iframe.contentWindow.postMessage(message, SNOWPACK_PUBLIC_BOWIE_URL);
             } catch (err) {
-                console.error(err);
+                this.error(err);
                 this.errors.push({ error: err.message, message });
             }
         }
