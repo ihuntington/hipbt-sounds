@@ -3,17 +3,25 @@
         "react": "preact/compat",
         "react-dom": "preact/compat"
     },
+    "plugins": [
+        "@snowpack/plugin-dotenv"
+    ],
     "optimize": {
         "bundle": true,
         "minify": true,
         "target": "es2018"
     },
     "exclude": [
+        ".env*",
         "examples/*",
         "mocks/*",
         ".editorconfig",
         ".gitignore",
         "package*.json",
         "README.md"
-    ]
+    ],
+    "mount": {
+        "public": "/",
+        "src": "/src"
+    }
 }

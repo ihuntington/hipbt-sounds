@@ -3,12 +3,14 @@ import { useEffect, useState } from "preact/hooks";
 import { sendSegment } from "../../services";
 import "./BookmarkBar.css";
 
+const { SNOWPACK_PUBLIC_BBC_URL } = import.meta.env;
+
 export const BookmarkBar = () => {
     const [artist, setArtist] = useState("");
     const [track, setTrack] = useState("");
 
     const handlePostMessage = async (event) => {
-        if (event.origin !== "https://www.bbc.co.uk" || !event.data) {
+        if (event.origin !== SNOWPACK_PUBLIC_BBC_URL || !event.data) {
             return;
         }
 

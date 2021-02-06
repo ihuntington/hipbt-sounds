@@ -5,6 +5,7 @@
  * - Store tracks from segments in session storage
  */
 (function hipbt_bbc_sounds () {
+    const { SNOWPACK_PUBLIC_BOWIE_URL } = import.meta.env;
     const URLS = {
         SEGMENTS: 'https://rms.api.bbc.co.uk/v2/services/bbc_6music/segments/latest',
     };
@@ -278,7 +279,7 @@
                 document.removeChild(frame);
             };
 
-            frame.src = `https://www.bowie.test/bookmarklet`;
+            frame.src = `${SNOWPACK_PUBLIC_BOWIE_URL}/bookmarklet`;
             frame.style.width = "100%";
             frame.style.display = "block";
             frame.style.position = "sticky";
@@ -302,8 +303,7 @@
             console.log('HIPBT > Send Message', message)
 
             try {
-                // const message = { type: "segment", track: segment.titles.secondary, artist: segment.titles.primary };
-                this._iframe.contentWindow.postMessage(message, 'https://www.bowie.test');
+                this._iframe.contentWindow.postMessage(message, SNOWPACK_PUBLIC_BOWIE_URL);
             } catch (err) {
                 console.error(err);
                 this.errors.push({ error: err.message, message });

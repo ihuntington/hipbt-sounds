@@ -1,3 +1,5 @@
+const { SNOWPACK_PUBLIC_BOWIE_URL } = import.meta.env;
+
 export const sendSegment = async (data) => {
     const payload = {
         segment: data.segment,
@@ -6,7 +8,7 @@ export const sendSegment = async (data) => {
     };
 
     try {
-        const response = await fetch('https://www.bowie.test/api/listens', {
+        const response = await fetch(`${SNOWPACK_PUBLIC_BOWIE_URL}/api/listens`, {
             method: 'POST',
             credentials: 'include',
             headers: {
