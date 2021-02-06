@@ -1,11 +1,11 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { sendSegment } from "../../services";
-import "./BookmarkBar.css";
+import "./NowPlaying.css";
 
 const { SNOWPACK_PUBLIC_BBC_URL } = import.meta.env;
 
-export const BookmarkBar = () => {
+export const NowPlaying = () => {
     const [artist, setArtist] = useState("");
     const [track, setTrack] = useState("");
 
@@ -13,8 +13,6 @@ export const BookmarkBar = () => {
         if (event.origin !== SNOWPACK_PUBLIC_BBC_URL || !event.data) {
             return;
         }
-
-        console.log("Bookmark bar received message", event);
 
         if (event.data.type === "NO_CURRENT_TRACK") {
             setArtist("");

@@ -1,4 +1,4 @@
 import { h } from "preact";
-import { BookmarkBar } from "../BookmarkBar";
+import { NowPlaying } from "../NowPlaying";
 
-export const App = () => <BookmarkBar />;
+export const App = () => <NowPlaying />;

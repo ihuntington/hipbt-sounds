@@ -8,7 +8,7 @@ export const sendSegment = async (data) => {
     };
 
     try {
-        const response = await fetch(`${SNOWPACK_PUBLIC_BOWIE_URL}/api/listens`, {
+        await fetch(`${SNOWPACK_PUBLIC_BOWIE_URL}/api/listens`, {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -16,10 +16,6 @@ export const sendSegment = async (data) => {
             },
             body: JSON.stringify(payload),
         });
-
-        if (response.ok) {
-            console.log('Send segment success');
-        }
     } catch (error) {
         console.error('Send segment error', error);
     }
