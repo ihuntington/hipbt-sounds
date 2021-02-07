@@ -1,7 +1,6 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { sendSegment } from "../../services";
-import "./NowPlaying.css";
 
 const { SNOWPACK_PUBLIC_BBC_URL } = import.meta.env;
 
